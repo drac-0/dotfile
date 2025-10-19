@@ -1,0 +1,72 @@
+/* Main bar appearance */
+window#waybar {
+    background-color: transparent;
+    color: #ffffff; /* default white text */
+    font-family: "CaskaydiaCove NF", monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* General module background */
+#workspaces, #clock, #battery, #language, #cpu, #memory, #disk, #backlight, #wireplumber, #network, #custom-playerctl, #custom-hyprpicker, #custom-randwall, #tray, #bluetooth {
+    background-color: #141414; /* dark gray background for contrast */
+    box-shadow: 0 0 3px #FFD32C;
+    border-radius: 12px;
+    padding: 0 10px;
+    margin: 4px 0;
+}
+
+/* Button styles */
+#workspaces button {
+    padding: 0px 6px;
+    border-radius: 8px;
+    color: #ffffff; /* white text */
+    margin: 2px 0;
+    transition: all 0.2s ease;
+}
+
+/* Active workspace button */
+#workspaces button.active {
+    color: #141414; /* dark text on bright yellow */
+    background-color: #FFD32C;
+}
+
+/* Hover state */
+#workspaces button:hover {
+    background-color: #FFF5C3; /* light yellow hover */
+    color: #141414;
+}
+
+/* Module colors (yellow + white dominant) */
+#wireplumber, #backlight {
+    color: #FFF5C3;
+}
+
+#cpu, #memory, #battery {
+    color: #FFD32C;
+}
+
+#language, #clock {
+    color: #ffffff;
+}
+
+/* Battery states */
+#battery.charging {
+    color: #FFEA99;
+}
+
+#battery.warning:not(.charging) {
+    color: #FF9E9E;
+}
+
+#wireplumber.muted {
+    color: #AAAAAA;
+}
+
+/* Tray menu */
+#tray menu {
+    background-color: #141414;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 4px;
+}
